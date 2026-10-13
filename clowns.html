@@ -187,33 +187,33 @@
     </div>
 </body>
 <script>
-    // // 5cm ni ekran piksellarida aniq o'lchab olish
-    // const measureDiv = document.createElement('div');
-    // measureDiv.style.width = '5cm';
-    // measureDiv.style.position = 'absolute';
-    // measureDiv.style.visibility = 'hidden';
-    // document.body.appendChild(measureDiv);
-    // const targetPixels = measureDiv.offsetWidth; // 5cm ning pikseldagi qiymati
-    // document.body.removeChild(measureDiv);
+    // 5cm ni ekran piksellarida aniq o'lchab olish
+    const measureDiv = document.createElement('div');
+    measureDiv.style.width = '5cm';
+    measureDiv.style.position = 'absolute';
+    measureDiv.style.visibility = 'hidden';
+    document.body.appendChild(measureDiv);
+    const targetPixels = measureDiv.offsetWidth; // 5cm ning pikseldagi qiymati
+    document.body.removeChild(measureDiv);
 
-    // let isTriggered = false;
-    // const targetUrl = 'pumba.html'; // Ochilishi kerak bo'lgan HTML fayl nomi
+    let isTriggered = false;
+    const targetUrl = 'pumba.html'; // Ochilishi kerak bo'lgan HTML fayl nomi
 
-    // window.addEventListener('scroll', function() {
-    //     if (isTriggered) return;
+    window.addEventListener('scroll', function() {
+        if (isTriggered) return;
 
-    //     // Agar foydalanuvchi 5cm dan ko'proq pastga tushsa
-    //     if (window.scrollY >= targetPixels) {
-    //         isTriggered = true;
-    //         window.location.href = targetUrl;
+        // Agar foydalanuvchi 5cm dan ko'proq pastga tushsa
+        if (window.scrollY >= targetPixels) {
+            isTriggered = true;
+            window.location.href = targetUrl;
             
-    //         /* Agar sahifani o'zgartirmasdan boshqa fayl mazmunini yuklash kerak bo'lsa:
-    //         fetch('boshqa.html')
-    //             .then(response => response.text())
-    //             .then(data => { document.body.innerHTML = data; });
-    //         */
-    //     }
-    // });
+            /* Agar sahifani o'zgartirmasdan boshqa fayl mazmunini yuklash kerak bo'lsa:
+            fetch('boshqa.html')
+                .then(response => response.text())
+                .then(data => { document.body.innerHTML = data; });
+            */
+        }
+    });
 </script>
 
 </html>
